@@ -1,2 +1,5 @@
 ipyleaflet
 requests
+pandas
+matplotlib
+seaborn
