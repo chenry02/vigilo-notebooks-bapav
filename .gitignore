@@ -1,3 +1,2 @@
-.ipynb_checkpoints
-.virtualenv
-.idea
+# Jupyter
+.*

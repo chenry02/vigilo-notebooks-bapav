@@ -1,7 +1,0 @@
-ipyleaflet
-requests
-pandas
-matplotlib
-seaborn
-overpy
-geopy
