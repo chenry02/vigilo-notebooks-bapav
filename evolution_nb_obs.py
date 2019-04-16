@@ -10,6 +10,7 @@ import seaborn as sns
 locale.setlocale(locale.LC_ALL, 'fr_FR')
 
 PLOT_VIGILO_RELEASE_DATE = True
+PLOT_VIGILO_PRESS_CONFERENCE_DATE = True
 
 sns.set_style("darkgrid")
 sns.set_context("talk", font_scale=0.8)
@@ -59,7 +60,18 @@ if PLOT_VIGILO_RELEASE_DATE:
             color='dimgrey',
             fontweight='bold')
 
-ax.set_xlim(datetime.date(year=2019, month=1, day=1), max(x1))
+if PLOT_VIGILO_PRESS_CONFERENCE_DATE:
+    vigilo_release_date = datetime.datetime(year=2019, month=4, day=16)
+    ax.plot((vigilo_release_date, vigilo_release_date), (0, 1000000), '--', color='grey')
+    ax.text(x=vigilo_release_date,
+            y=780,
+            s='Conférence de presse  ',
+            horizontalalignment='right',
+            verticalalignment='top',
+            color='dimgrey',
+            fontweight='bold')
+
+ax.set_xlim(datetime.date(year=2019, month=1, day=1), max(x1) + datetime.timedelta(days=1))
 ax.set_ylim(0, ylim[1])
 
 plt.title("Évolution du nombre d'observations de Vǐgǐlo\ndepuis le 1er janvier")
