@@ -15,22 +15,27 @@ categories = resp.json()
 
 center = [df.coordinates_lat.mean(), df.coordinates_lon.mean()]
 
-hm_map = folium.Map(location=center, zoom_start=12)
+hm_map = folium.Map(location=center, zoom_start=13)
+
+red_gradient = {0.2: 'gold', 0.7: 'orange', 1: 'red'}
+blue_gradient = {0.2: 'deeppink', 0.7: 'purple', 1: 'blue'}
 
 for cat in categories:
     data = list(zip(df[df.categorie == cat].coordinates_lat, df[df.categorie == cat].coordinates_lon))
+
     hm = folium.plugins.HeatMap(data=data,
                                 name=categories[cat],
-                                min_opacity=0.5,
-                                max_val=10,
-                                radius=10,
-                                blur=10,
-                                max_zoom=1,
+                                min_opacity=0.7,
+                                max_val=5,
+                                radius=8,
+                                blur=5,
+                                max_zoom=18,
                                 overlay=True,
                                 control=True,
-                                show=True)
+                                gradient=red_gradient if cat in ('2', '7') else blue_gradient,
+                                show=True if cat == '2' else False)
     hm_map.add_child(hm)
 
 folium.LayerControl().add_to(hm_map)
 
-hm_map.save(r"C:\Users\Gustave\Desktop\heatmap.html")
+hm_map.save("./heatmap.html")
