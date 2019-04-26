@@ -6,3 +6,4 @@ overpy
 geopy
 ipyleaflet
 folium
+tilemapbase
