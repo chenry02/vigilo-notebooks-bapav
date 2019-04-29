@@ -121,8 +121,6 @@ map_extent = map_extent.to_aspect(ASPECT_RATIO)
 # Reprojecting extant
 extent = [map_extent.xmin, map_extent.xmax, map_extent.ymin, map_extent.ymax]
 
-plotter = tilemapbase.Plotter(map_extent, t, zoom=ZOOM_LEVEL)
-
 # Reprojecting coordinates
 df.coordinates_lon = df.coordinates_lon.apply(lambda x: tilemapbase.project(x, 0)[0])
 df.coordinates_lat = df.coordinates_lat.apply(lambda x: tilemapbase.project(0, x)[1])
