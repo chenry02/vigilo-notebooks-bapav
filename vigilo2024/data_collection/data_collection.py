@@ -3,17 +3,17 @@ import pandas as pd
 
 # Liste des catégories avec leurs identifiants
 categories = {
-    "Absence d'aménagement": 8,
-    "Aménagement mal conçu": 3,
-    "Défaut d'entretien": 4,
-    "Absence d'arceaux de stationnement": 5,
-    "Véhicule ou objet gênant": 2,
-    "Accident, chute, incident": 9,
-    "Signalisation, marquage": 6,
-    "Incivilité récurrente sur la route": 7,
-    "Vol ou dégradation de vélo": 10,
-    "Autre": 100,
-    "Éclairage public insuffisant": 11
+    "Absence d'aménagement": '8',
+    "Aménagement mal conçu": '3',
+    "Défaut d'entretien": '4',
+    "Absence d'arceaux de stationnement": '5',
+    "Véhicule ou objet gênant": '2',
+    "Accident, chute, incident": '9',
+    "Signalisation, marquage": '6',
+    "Incivilité récurrente sur la route": '7',
+    "Vol ou dégradation de vélo": '10',
+    "Autre": '100',
+    "Éclairage public insuffisant": '11'
 }
 
 def data_collection(start_date, end_date, url, category_filter=None, location_filter=None,
@@ -34,7 +34,7 @@ def data_collection(start_date, end_date, url, category_filter=None, location_fi
         resp = requests.get(url, params=params)
         resp.raise_for_status()  # Raise an exception for 4xx and 5xx status codes
         df = pd.DataFrame(resp.json())
-        return df
+        return df[df['categorie'] == categories["Absence d'aménagement"]]
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
@@ -46,7 +46,7 @@ def main():
     start_date = '2018-01-01'
     end_date = '2018-12-31'
     url = 'https://vigilo.bapav.org/get_issues.php'
-    category_filter = [categories["Absence d'aménagement"], categories["Aménagement mal conçu"]]  # Exemple de filtre sur deux catégories
+    category_filter = categories["Absence d'aménagement"]
     location_filter = None
     status_filter = None
     approval_filter = None
