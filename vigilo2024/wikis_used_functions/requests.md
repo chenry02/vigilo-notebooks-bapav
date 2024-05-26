@@ -3,7 +3,7 @@
 La bibliothèque Requests est une librairie Python populaire qui facilite l'envoi de requêtes HTTP et la gestion des réponses. Elle offre une interface simple et conviviale pour interagir avec des API Web, récupérer des données à partir d'URL et effectuer d'autres opérations liées aux requêtes HTTP.
 
 ## get
-Cette fonction envoie une requête HTTP GET à l'URL spécifiée avec des paramètres de requête et retourne une réponse. Elle est utilisée lorsque des paramètres doivent être passés avec l'URL.
+Cette fonction envoie une requête HTTP GET à l'URL spécifiée. Il est possible de spécifier des paramètres de requête. Cette fonction permet de récupérer des données à partir d'une ressource en ligne identifiée par l'URL.
 
 ### Arguments utilisés :
 - `url` (str): L'URL à laquelle la requête est envoyée.
