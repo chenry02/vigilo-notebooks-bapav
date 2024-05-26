@@ -1,22 +1,8 @@
-# Fonction utilisées de la librairie Requests
+# Fonction utilisée de la librairie Requests
 
 La bibliothèque Requests est une librairie Python populaire qui facilite l'envoi de requêtes HTTP et la gestion des réponses. Elle offre une interface simple et conviviale pour interagir avec des API Web, récupérer des données à partir d'URL et effectuer d'autres opérations liées aux requêtes HTTP.
 
-## 1. Fonction `get(url)`
-Cette fonction envoie une requête HTTP GET à l'URL spécifiée et retourne une réponse. Dans le contexte de ce code, cette fonction est utilisée pour récupérer les données à partir d'une URL.
-
-### Arguments utilisés :
-- `url` (str): L'URL à laquelle la requête est envoyée.
-
-**Exemple :**
-```python
-# Exemple d'utilisation pour récupérer les catégories à partir d'une URL
-url_categories = 'https://vigilo-bf7f2.firebaseio.com/categorieslist.json'
-resp = requests.get(url_categories)
-resp.raise_for_status()  # Vérifie si la requête a réussi ou lève une exception
-```
-
-## 2. Fonction `get(url, params={'data': full_query})`
+## get
 Cette fonction envoie une requête HTTP GET à l'URL spécifiée avec des paramètres de requête et retourne une réponse. Elle est utilisée lorsque des paramètres doivent être passés avec l'URL.
 
 ### Arguments utilisés :
@@ -28,4 +14,5 @@ Cette fonction envoie une requête HTTP GET à l'URL spécifiée avec des param�
 # Exemple d'utilisation avec des paramètres de requête pour récupérer des données
 full_query = "valeur_de_la_requete"  # Exemple de valeur de la requête
 response = requests.get(url, params={'data': full_query})
+resp.raise_for_status()  # Vérifie si la requête a réussi ou lève une exception
 ```
