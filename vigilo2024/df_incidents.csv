@@ -1,4 +1,6 @@
 token,latitude,longitude,address,comment,explanation,time,categorie,cityname
+7A2D0349,43.608821110056866,3.8487704470753674,"Avenue de la Liberté, Montpellier",nbrx morceaux de verre sur la largeur de la piste,,2024-05-25 14:36:00,9,Montpellier
+14DA3579,43.63767712252207,3.8305941224098206,"Ligne 9, Montpellier",végétation jamais entretenue,,2024-05-22 11:48:00,4,Montpellier
 AA1CA063,43.60602222222222,3.8730777777777776,"Cours Gambetta, Montpellier",Roue dans les Rails du tram,La personne venait d’une rue perpendiculaire et s’est tapé la tête contre la margelle,2024-05-16 11:55:00,9,Montpellier
 AF00A88E,43.61792,3.88207,"Rue de la Cavalerie, Montpellier",stationnement gênant récurrent ,stationnement gênant sur le trottoir systématique rendant le passage des piétons impossible. Obligé de passer sur la route.,2024-05-15 19:03:00,2,Montpellier
 B9B3C9BA,43.59616605583544,3.8976889103651047,"Rue des Acconiers, Montpellier",Risque de chute ,Poteau anti-stationnement en travers de la piste,2024-05-11 17:32:00,2,Montpellier
@@ -10,6 +12,11 @@ E7524E86,43.636355903569935,3.8751389086246486,"Rue Antoine-Laurent Jussieu, Mon
 2A49C46A,43.63648159654065,3.874800615012646,"Rue Antoine-Laurent Jussieu, Montpellier",devant l'école. Piétons/enfants ne passent pas,,2024-05-06 06:23:00,2,Montpellier
 43B37741,43.69389419243387,3.809375166893006,"Rue du Devois, Saint-Gély-du-Fesc",Véhicule stationné sur piste cyclable ,,2024-05-04 09:06:00,2,Saint-Gély-du-Fesc
 DF49EA9D,43.588218989824,3.8722310587763786,"Avenue de Maurin, Montpellier",ralentisseurs gênants ? Empruntez la BC,"Des ralentisseurs ont été installés avec juste assez de place pour les chauffeurs de passer à côté, sur la piste cyclable ! C'est hyper dangereux, car c'est un endroit où tout le monde roule excessivement vite",2024-05-03 14:48:00,3,Montpellier
+4D581E43,43.63613460565436,3.8598808273673058,"Avenue Abbé Paul Parguel, Montpellier",plots en bétons en plein milieu rétrécissant la,"La piste cyclable est étroite et couplée avec des plots en béton au milieu, ce qui entrave la circulation, surtout pour les carrioles. En descente, ces obstacles deviennent particulièrement dangereux et gênants. 
+J'ai malheureusement pu en faire l'expérience lors du déséquilibre de la carriole en voulant éviter le plot, occasionnant un choc physique et émotionnel pour mes enfants.
+Serait il possible de changer ces plots par des poteaux qui seraient moins larges par exemple ?
+
+",2024-05-03 06:26:00,3,Montpellier
 115CBC13,43.60754489701478,3.896704574121471,"Avenue du Pirée, Montpellier",absence de signalisation sur espace partagé,espace partagé piéton/cycliste. un marquage au sol pour définir un espace pour les piéton et un espace cycliste serait bienvenu,2024-05-01 08:12:00,6,Montpellier
 DA13E990,43.69402777777778,3.8094055555555553,"Rue du Devois, Saint-Gély-du-Fesc","Véhicule stationné en travers, sur piste cyclabl",,2024-04-21 09:53:00,2,Saint-Gély-du-Fesc
 51740784,43.61237212684319,3.870022594928741,"Place Jacques Mirouze, Montpellier",pas de place pour la piscine ,,2024-04-16 06:54:00,8,Montpellier
