@@ -1,21 +1,31 @@
-# Fonctions et Méthodes de la Librairie Requests utilisées
+# Fonction utilisées de la librairie Requests
 
-La librairie Requests est un outil Python puissant qui simplifie les requêtes HTTP. Elle offre une interface conviviale pour envoyer des requêtes telles que GET, POST, PUT, DELETE, etc., et récupérer les réponses correspondantes.
+La bibliothèque Requests est une librairie Python populaire qui facilite l'envoi de requêtes HTTP et la gestion des réponses. Elle offre une interface simple et conviviale pour interagir avec des API Web, récupérer des données à partir d'URL et effectuer d'autres opérations liées aux requêtes HTTP.
 
-## 1. `requests.get(url, params=None, **kwargs)`
+## 1. Fonction `get(url)`
+Cette fonction envoie une requête HTTP GET à l'URL spécifiée et retourne une réponse. Dans le contexte de ce code, cette fonction est utilisée pour récupérer les données à partir d'une URL.
 
-Cette fonction envoie une requête GET à l'URL spécifiée et retourne un objet `Response`. Voici une explication détaillée de ses arguments :
+### Arguments utilisés :
+- `url` (str): L'URL à laquelle la requête est envoyée.
 
-- **url** : L'URL à laquelle vous souhaitez envoyer la requête GET. C'est une chaîne de caractères représentant l'adresse de la ressource à récupérer.
-  
-- **params (facultatif)** : Les paramètres de requête à inclure dans l'URL. Ces paramètres sont généralement des données envoyées avec la requête GET, souvent utilisées pour filtrer ou paginer les résultats. Les paramètres peuvent être spécifiés sous forme d'un dictionnaire ou d'une liste de tuples `(clé, valeur)`.
+**Exemple :**
+```python
+# Exemple d'utilisation pour récupérer les catégories à partir d'une URL
+url_categories = 'https://vigilo-bf7f2.firebaseio.com/categorieslist.json'
+resp = requests.get(url_categories)
+resp.raise_for_status()  # Vérifie si la requête a réussi ou lève une exception
+```
 
-- **kwargs (facultatif)** : Des paramètres supplémentaires transmis à la méthode `requests.Request()`. Cela peut inclure des en-têtes HTTP personnalisés, des cookies, des certificats SSL, des délais d'attente, etc. Les valeurs de ces paramètres sont spécifiées sous forme de clés et de valeurs dans un dictionnaire.
+## 2. Fonction `get(url, params={'data': full_query})`
+Cette fonction envoie une requête HTTP GET à l'URL spécifiée avec des paramètres de requête et retourne une réponse. Elle est utilisée lorsque des paramètres doivent être passés avec l'URL.
 
-## 2. `requests.exceptions.RequestException`
+### Arguments utilisés :
+- `url` (str): L'URL à laquelle la requête est envoyée.
+- `params` (dict): Les paramètres de requête à ajouter à l'URL.
 
-Classe d'exception de base pour les erreurs de requête. Toutes les exceptions générées par des erreurs de requête sont des sous-classes de cette classe.
-
-## 3. `Response.raise_for_status()`
-
-Méthode de la classe `Response` utilisée pour vérifier si la requête a réussi ou non et lever une exception en cas d'échec.
+**Exemple :**
+```python
+# Exemple d'utilisation avec des paramètres de requête pour récupérer des données
+full_query = "valeur_de_la_requete"  # Exemple de valeur de la requête
+response = requests.get(url, params={'data': full_query})
+```
